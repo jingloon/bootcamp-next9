@@ -3,5 +3,10 @@ language : node_js
 node_js:
   - 10.15.2
 
-
-
+deploy:
+  provider: heroku
+  app: tap5workshop
+  api_key:
+    secure: $HEROKU_API_KEY
+  on:
+    branch: master
